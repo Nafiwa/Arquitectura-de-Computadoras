@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="..\css\style.css">
+  <script type="text/javascript" src="..\Javascript\functions.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300&family=Comfortaa:wght@300&family=MuseoModerno&display=swap"
+    rel="stylesheet">
+  <title>Arquitectura de Computadoras</title>
+</head>
+
+<body class="background">
+  <p class="arquitectura" id="inicio">Arquitectura de Computadoras &#128187;&#128296;</p>
+
+
+  <button class="tablink" onclick="openPage('Home', this, 'rgb(99, 154, 177)')">Unidad 1</button>
+  <button class="tablink" onclick="openPage('News', this, 'rgb(66, 114, 136)')" id="defaultOpen">Unidad 2</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'rgb(24, 66, 85)')">Unidad 3</button>
+  <button class="tablink" onclick="openPage('About', this, 'rgb(7, 26, 44)')">Unidad 4</button>
+  <button class="tablink" onclick="openPage('tareas', this, 'rgb(1, 12, 22)')">Tareas</button>
+
+  <div id="Home" class="tabcontent">
+    <h1 class="unidad">Unidad 1</h1>
+
+    <div class="subtitulos">
+      <h2 id="modelos">1.1 Modelos de Arquitecturas </h2>
+    </div>
+    <div class="clasica">
+      <div class="black">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>1.1.1 Clásicas</h2>
+            <p>Las primeras computadoras con esta arquitectura fueron las electromecánicas y de tubos de vacio.
+              En esta, existen dos tipos: <b>Arquitectura de Jonh Von Neumman y Arquitectura Harvard.</b></p>
+          </div>
+          <div class="card">
+            <h3>Arquitectura Von Neumann</h3>
+            <img src="..\media\VonNeumann.jpg" width="430">
+
+            <h3>Arquitectura Harvard</h3>
+            <img src="../media/Harvard.jpg" width="430">
+
+          </div>
+
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h1>Arquitectura Von Neumann</h1>
+            <p>Está formado por una CPU que a su vez contiene una ALU y los registros del procesador,
+              una unidad de control y un contador de programa. También posee una memoria principal
+              y un mecanismo de entrada y salida.</p>
+            <div class="row">
+              <div class="column">
+                <h4>Componentes principales</h4>
+                <ol>
+                  <li>Unidad de Memoria.</li>
+                  <li>Unidad de Entrada/Salida.</li>
+                  <li>Unidad de Control. Incluidos CPU</li>
+                  <li>Unidad Aritmética Lógica. Incluida en CPU.</li>
+                  <li>Registros de Programas. Incluidos en CPU.</li>
+                </ol>
+              </div>
+
+              <div class="column">
+                <p>Existen limitaciones en esta arquitectura que son la longitud
+                  de las instrucciones por el bus de datos, donde el microprocesador
+                  hace varios accesos para realizar instrucciones complejas.</p>
+              </div>
+            </div>
+            <div class="card">
+              <h1>Arquitectura Harvard</h1>
+              <p>En esta se utilizan los micro controladores, tiene el CPU conectado
+                a dos memorias por medio de dos buses Una memoria tiene instrucciones
+                y la otra almacena datos Las memorias son independientes, lo cual permite
+                que el CPU acceda de forma independiente a cada una de ellas.</p>
+              <p>
+                Estos buses pueden contener distintos contenidos. La longitud de datos e
+                instrucciones pueden ser distintas y garantiza un un uso optimo de la memoria
+              </p>
+              <p>
+                Incluso en estos casos, es común emplear instrucciones especiales con el fin de
+                acceder a la memoria del programa como si fuera datos para la creación de tablas
+                de solo lectura o para reprogramación, lo que los hace procesadores de arquitectura Harvard modificada.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- fin de el div clasica-->
+    </div>
+    <div class="separacion"></div>
+    <div class="segmentadas">
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h1>1.1.2 Segmentadas</h1>
+            <p>Arquitectura utilizada para crear segmentación o paralelismo.
+              Esta tecnología divide el procesador en diferentes capas y procesa cada una en una instrucción diferente
+              pero
+              también trabaja con varias a la vez. Se utiliza el entubamiento, que es la forma de trabajar en forma
+              paralela
+              diferentes instrucciones para llevar a cabo la comunicación.
+
+              Generalidades Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de
+              fetch-decode-execute en inglés)
+              es el período que tarda la unidad central de proceso (CPU) en ejecutar una instrucción de lenguaje
+              máquina.
+              Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada
+              instrucción en un programa.
+              Cada instrucción del juego de instrucciones de una CPU puede requerir diferente número de ciclos de
+              instrucción para su ejecución.
+              Un ciclo de instrucción está formado por uno o más ciclos máquina.
+
+              La segmentación es una técnica de implementación, que explota el paralelismo entre las instrucciones
+              de un flujo secuencial. Tiene la ventaja sustancial que, de forma distinta a algunas técnicas de aumento
+              de velocidad,
+              no es visible al programador.</p>
+          </div>
+          <div class="card">
+            <h1>Segmentación de instrucciones:</h1>
+            <p>
+              Arquitectura DLX.<br>
+              Encauzamiento de instrucciones en el DLX.
+              Parones:<br>
+              por dependencia estructural,
+              por dependencia de datos,
+              por dependencia de control.<br>
+              Múltiples unidades funcionales.<br>
+              Ejemplo: el MIPS R4000.</p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <div class="row">
+              <div class="column">
+                <h1>Tipos de cauces:</h1>
+                <ol style="list-style-type:disc">
+                  <li><b>Unifunción:</b> ejecutan un único proceso.</li>
+                  <li><b>Multifunción:</b> pueden ejecutar varios procesos:</li>
+                  <li><b>Estáticos:</b> en un instante determinado sólo pueden ejecutar uno.</li>
+                  <li><b>Dinámicos:</b> pueden ejecutar simultáneamente varios procesos.</li>
+                  <li><b>Lineal:</b> a cada etapa sólo le puede seguir otra etapa concreta.</li>
+                  <li><b>No lineal:</b> se pueden establecer recorridos complejos de las etapas.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="../media/DLX+encauzado+Etapas+del+cauce+Búsqueda+(IF).jpg" width="300"
+              style="align-content: center;">
+          </div>
+        </div>
+      </div>
+      <!-- fin del contenedor segmentadas-->
+    </div>
+    <div class="separacion"></div>
+    <div class="multi">
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h1>1.1.3 De multiprocesamiento</h1>
+            <p class="veinte">Se denomina multiprocesador a un computador que cuenta con dos o más microprocesadores.
+              El multiprocesador puede ejecutar simultáneamente varios hilos pertenecientes a un mismo
+              proceso o bien a procesos diferentes. Para que un multiprocesador opere correctamente necesita
+              un sistema operativo especialmente diseñado para ello.</p>
+            <br>
+            <p class="veinte">La arquitectura NUMA, donde cada procesador tiene acceso y control exclusivo a una parte
+              de la memoria.
+              La arquitectura SMP, donde todos los procesadores comparten toda la memoria.
+              El alto rendimiento y bajo coste de los microprocesadores inspiraron un renovado interés en los
+              multiprocesadores en los años ochenta. Varios microprocesadores se pueden colocar sobre un bus común
+              porque:</p>
+            <ol>
+              <li>Son mucho más pequeños que los procesadores multichip</li><br>
+              <li>Las caches pueden disminuir el tráfico del bus y los protocolos de coherencia pueden mantener caché y
+                memoria consistente.</li>
+            </ol><br>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <div class="row">
+              <h2>Las CPUs de multiprocesamiento se clasifican de la siguiente manera:</h2>
+              <ol style="list-style-type:disc">
+                <li>SISO – (Single Instruction, Single Operand ), computadoras independientes.</li><br>
+                <li>SIMO – (Single Instruction, Multiple Operand ), procesadores vectoriales.</li><br>
+                <li>MISO – (Multiple Instruction, Single Operand ), no implementado</li><br>
+                <li>MIMO – (Multiple Instruction, Multiple Operand ) sistemas SMP, Clusters</li><br>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separacion"></div>
+    <div class="componentes">
+      <div class="subtitulos">
+        <h2 id="analisis">1.2 Análisis de los componentes </h2>
+      </div>
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>1.2.1 Arquitecturas</h2>
+            <p>Para el diseño de un microprocesador, se visualizan las instrucciones.</p>
+            <h2>Arquitectura CISC</h2>
+            <p>
+              En la arquitectura computacional, CISC es un modelo de arquitectura, en donde los microprocesadores
+              tienen un conjunto instrucciones que caracterizan por ser muy amplio y permitir operaciones complejas
+              entre operandos, situados en la memoria o en los registros internos.
+            </p>
+          </div>
+          <div class="card">
+            <p>Entre las ventajas de CISC destacan las siguientes:</p>
+            <ol style="list-style-type: disc;">
+              <li>Reduce la dificultad de crear compiladores.</li><br>
+              <li>Permite reducir el costo total del sistema.</li><br>
+              <li>Reduce los costos de creación de software.</li><br>
+            </ol>
+            <p>
+              El término microprocesador CISC significa “Complex Instruction Set Computer”.
+              Como sugiere su nombre el microprocesador CISC ejecuta los comandos complejos usando menos líneas de
+              código.
+
+              Una computadora CISC es una computadora donde las instrucciones individuales pueden realizar numerosas
+              operaciones de bajo nivel. Por ejemplo, una carga de memoria, una operación aritmética y el almacenamiento
+              en memoria.
+
+              Es un plan de diseño de CPU basado en comandos únicos, que son expertos en la ejecución de operaciones de
+              varios pasos.
+
+              Estas acciones se logran mediante procesos de múltiples pasos o modos de direccionamiento en instrucciones
+              individuales.
+              Por eso reciben el nombre de “Conjunto de instrucciones complejas”.
+              Las computadoras CISC tienen programas pequeños. Tiene una gran cantidad de instrucciones compuestas que
+              exigen
+              mucho tiempo para su realización.
+              Un solo conjunto de instrucciones está descrito en varios pasos; cada conjunto de instrucciones tiene más
+              de 300
+              instrucciones separadas. Las instrucciones se ejecutan en un tiempo de dos a diez ciclos de máquina.
+            </p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>Arquitectura RISC</h2>
+            <p>
+              Arquitectura computacional, RISC (Reduced Instruction Set Computer) es un tipo de microprocesador
+              con las siguientes características fundamentales:
+            </p>
+            <ol style="list-style-type: disc;">
+              <li>Instrucciones de tamaño fijo y presentado en un reducido número de formatos.</li><br>
+              <li>Sólo las instrucciones de carga y almacenamiento acceden a la memoria de datos.</li><br>
+            </ol>
+            <p>
+              Este microprocesador está diseñado para llevar a cabo pocas instrucciones al mismo tiempo.
+              Basado en comandos pequeños, estos chips necesitan menos transistores.
+
+              Esta arquitectura hace que los microprocesadores sean económicos de diseñar y producir.
+              Las características de RISC incluyen lo siguiente:
+            </p>
+            <ol style="list-style-type: disc;">
+              <li>Nodos de direccionamiento simples</li><br>
+              <li>La necesidad de instrucciones de código es menor</li><br>
+              <li>Pocos tipos de datos en hardware</li><br>
+              <li>Registro de uso general Idéntico</li><br>
+              <li>Conjunto de instrucciones uniformes</li><br>
+            </ol>
+            <p>
+              Además, al escribir un programa, RISC lo hace más fácil al permitir que el programador
+              elimine códigos innecesarios y reduce el desperdicio de ciclos.
+              <br>
+              En el diseño de una máquina RISC se tienen cinco pasos:
+            </p>
+            <br>
+            <ol>
+              <li>Analizar las aplicaciones para encontrar las operaciones clave.</li><br>
+              <li>Diseñar un bus de datos que sea óptimo para las operaciones clave.</li><br>
+              <li>Diseñar instrucciones que realicen las operaciones clave utilizando el bus de datos.</li><br>
+              <li>Agregar nuevas instrucciones sólo si no hacen más lenta a la máquina.</li><br>
+              <li>Repetir este proceso para otros recursos.</li><br>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separacion"></div>
+    <div class="cpu">
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>1.2.2 Unidad Central de Procesamiento</h2>
+            <p>Mejor conocido como CPU, es aquel donde se manejan las instrucciones enteras o tambien de punto flotante
+            </p>
+            <p>El CPU puede clasificarse según:</p>
+            <ol style="list-style-type: disc;">
+              <li>Su arquitectura cauce (pipeline)</li><br>
+              <li>Si son CISC o RISC</li><br>
+              <li>Si son Von Neumann o Harvard.</li><br>
+              <li>Bus de conexión al exterior (8, 16,32, 64 bits)</li><br>
+              <li>Tamaño de ALU</li><br>
+            </ol>
+          </div>
+          <div class="card">
+            <h2>Procesadores Intel</h2>
+            <h5>Estos se apoyan bastante en otros componentes del ordenador,
+              principalmente en las tarjetas gráficas y en la memoria RAM. Con esto c
+              onsiguen dar buenos resultados sin llevar su rendimiento al limite y mantenerse en
+              un rendimiento estable hasta con programas o aplicaciones muy exigentes.</h5>
+            <p>Las CPU´s Intel cuentan además, con un sistema de enfriamento por aire con el que conseguiremos
+              evitar daños por sobrecalentamiento del hardware. Esto es fundamental, tanto si va integrado o no,
+              que nuestra CPU cuente con un buen sistema de refrigeración, en nuestra web tenéis una amplia gama,
+              como la Andromeda 120 y estar atentos porque pronto se presentarán más novedades.
+
+              Otro aspecto fundamental a la hora de elegir nuestra CPU es para lo que vayamos a dedicar nuestro
+              ordenador y la potencia que vayamos a necesitar. A mayor potencia mayor será el precio. Actualmente
+              estamos con la generación Intel Core, siendo la más baja la CPU Intel Core serie x00 hasta llegar a
+              las más potentes Intel Extreme.</p>
+            <img src="../media/intel.jpg" width="250" style="align-items: center;">
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <p>CARACTERÍSTICAS DEL CPU</p>
+            <ol style="list-style-type: disc;">
+              <li>Modos de direccionamiento para obtener los operandos de las instrucciones</li><br>
+              <li>Conjunto de instrucciones para ejecutar el CPU</li><br>
+              <li>Modelo de programador</li><br>
+              <li>Ciclo de instrucción</li><br>
+              <li>Buses de interconexión</li><br>
+              <li>Dispositivos de entrada y salida</li><br>
+            </ol>
+          </div>
+          <div class="card">
+            <p>Para la selección de los procesadores a utilizar en los equipos necesitamos ver las acciones tales como:
+              <br>
+              Acciones Directas.<br>
+              • Integrar un nuevo sistema de cómputo.<br>
+              • Reemplazar un CPU dañado.<br>
+              • Actualizar un sistema de cómputo.<br>
+              <br>
+              <br>
+              Acciones Indirectas.<br>
+              • Comprar equipo de cómputo nuevo.<br>
+              • Construir un equipo de control – Microcontrolador.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Procesadores AMD</h2>
+            <h5>Si nos ponemos detallistas no son procesadores si no microprocesadores que funcionan con un bus
+              multidireccional
+              con el que conseguimos una comunicación mucho más fluida entre el chipset y el procesador. Además, no
+              dependen tanto
+              de otros componentes del equipo por lo que estrictamente serían más potentes.</h5>
+            <p>En AMD encontraremos los procesadores divididos por arquitecturas, desde los Ryzen 3 que ofrecen una
+              respuesta
+              rápida para trabajar o jugar hasta el Ryzen 7 con un rendimiento muy superior que compiten directamente
+              con los
+              i5 e incluso i7 de Intel.
+              <br>
+              Ventajas del procesador serie Opteron de AMD<br>
+              • Optimizado para la virtualización<br>
+              • Ayuda a reducir el CTP<br>
+              • Ideal para satisfacer las necesidades de la infraestructura de TI
+            </p>
+            <img src="../media/AMD-Chipset.jpg" width="250" style="align-items: center;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separacion"></div>
+    <div class=alu>
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>1.2.3 Unidad Aritmética Lógica</h2>
+            <p>Mejor conocida como ALU, es un circuito digital que realiza las operaciones aritméticas y lógicas en un
+              circuito, aritméticas tales como:<br>
+              suma, resta, división, multiplicación.<br>
+
+              Y lógicas como:<br>
+              si, no u o.
+              <br>
+              Este también cuenta con una serie de registros para almacenar datos y bits de resultados.
+              <br>
+              Partes de la ALU:<br><br>
+              • Sumador/Restador<br>
+              • Operadores lógicos (AND, OR, XOR, NOT)<br>
+              • Registro de salida.<br>
+              • Acumulador y registro auxiliar.<br>
+              • Señales de control que indiquen la operación a realizar.
+            </p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h3>Debe contar con un circuito de control que permita:<br><br>
+              • Identificar la operación a realizar<br>
+              • Administrar los recursos internos<br>
+              • Generar las banderas</h3>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.2.4 Buses</h2>
+          <h5>TSe denomina bus, en informática, al conjunto de conexiones físicas (cables, placa de circuito impreso,
+            etc.)
+            que pueden compartirse con múltiples componentes de hardware para que se comuniquen entre sí.</h5>
+
+          <p>El propósito de los buses es reducir el número de rutas necesarias para la comunicación entre los distintos
+            componentes,
+            al realizar las comunicaciones a través de un solo canal de datos. Ésta es la razón por la que, a veces, se
+            utiliza
+            la metáfora “autopista de datos”.
+
+            En el caso en que sólo dos componentes de hardware se comuniquen a través de la línea, podemos hablar de
+            puerto hardware
+            (puerto serial o puerto paralelo).</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Características de un bus</h2>
+          <h5>Cantidad de Informacion:</h5>
+          <p>Un bus se caracteriza por la cantidad de información que se transmite en forma simultánea.
+            Este volumen se expresa en bits y corresponde al número de líneas físicas mediante las cuales
+            se envía la información en forma simultánea.
+
+            Un cable plano de 32 hilos permite la transmisión de 32 bits en paralelo. El término “ancho” se utiliza
+            para designar el número de bits que un bus puede transmitir simultáneamente.</p>
+          <h5>Velocidad del Bus:</h5>
+          <p>Por otra parte, la velocidad del bus se define a través de su frecuencia (que se expresa en Hercios o
+            Hertz),
+            es decir el número de paquetes de datos que pueden ser enviados o recibidos por segundo. Cada vez que se
+            envían
+            o reciben estos datos podemos hablar de ciclo.</p>
+        </div>
+
+        <div class="card">
+          <h3>Subconjunto de un bus</h3>
+          <p>En realidad, cada bus se halla generalmente constituido por entre 50 y 100 líneas físicas distintas que se
+            dividen a su vez en tres subconjuntos:
+
+            <b>El bus de direcciones: </b>(también conocido como bus de memoria) transporta las direcciones de memoria
+            al
+            que el procesador desea acceder, para leer o escribir datos. Se trata de un bus unidireccional.
+
+            <b>El bus de datos:</b> transfiere tanto las instrucciones que provienen del procesador como las que
+            se dirigen hacia él. Se trata de un bus bidireccional.
+
+            <b>El bus de control </b>(en ocasiones denominado bus de comando) transporta las órdenes y las señales
+            de sincronización que provienen de la unidad de control y viajan hacia los distintos componentes de
+            hardware.
+            Se trata de un bus bidireccional en la medida en que también transmite señales de respuesta del hardware.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="separacion"></div>
+    <div class="memoria">
+      <div class="subtitulos">
+        <h2>1.3 Memoria</h2>
+      </div>
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h5>1.3.1 Conceptos básicos del manejo de la memoria</h5>
+            <p>Es un dispositivo que puede mantenerse en dos estados estables por cierto tiempo.
+              Puede usarse para representar un bit. A un bit se le conoce como celda básica de memoria.
+              <br><br>
+              Un dispositivo de memoria completo, se forma con varias celdas básicas y circuitos asociados
+              para poder leer y escribir dichas celdas básicas; permiten almacenar un grupo de N bits.
+              Las memorias de semiconductor no volátiles se están usando también como memorias
+              secundarias en varios dispositivos de electrónica avanzada y computadoras especializadas y no
+              especializadas.
+              <br><br>
+              A) La memoria interna: Sirve para almacenar información que el sistema utiliza para el inicio y
+              para que funcionen varios tipos de programas, como los sistemas operativos.
+              La memoria interna suele estar en microchips pequeños que están unidos o conectados a la placa madre.
+              Está constituida, normalmente, por un pequeño conjunto de registros de alta velocidad que son internos a
+              la CPU.
+              Estos registros los utiliza la CPU como elementos de almacenamiento temporal de instrucciones y de datos.
+              <br>
+
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+
+            <p> B) Memoria principal: Es una memoria, relativamente grande y rápida, utilizada para el almacenamiento
+              de las instrucciones de los programas (que están en ejecución en la computadora) y sus correspondientes
+              datos.
+              Se caracteriza por el hecho de que se puede acceder a cualquier información almacenada en ella mediante
+              instrucciones
+              del repertorio de la máquina.
+              <br><br>
+              C) Memoria externa o secundaria: Son dispositivos periféricos de almacenamiento accesibles a la CPU
+              a través de controladores de E/S. Las memorias secundarias que se emplean normalmente son, entre otras,
+              los discos y las cintas magnéticas
+            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.3.2 Memoria principal</h2>
+          <h5>Es denominada como la memoria del semiconductor, que utiliza circuitos integrabos basados en
+            semiconductores para almacenar información.
+            <br><br>
+            Existen memorias de semiconductor de ambos tipos:
+            Volátiles y no volátiles
+          </h5>
+        </div>
+        <div class="card">
+          <h2>Memoria no Volátil</h2>
+          <img src="../media/descarga (3).jfif">
+          <p>Las memorias de semiconductor no volátiles se están usando también como memorias secundarias en varios
+            dispositivos de electrónica avanzada y computadoras especializadas y no especializadas.</p>
+        </div>
+
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Memoria Volátil</h2>
+          <img src="../media/descarga (3).jfif">
+          <p>la memoria principal consiste casi exclusivamente en memoria de semiconductor volátil y dinámica, acceso
+            aleatorio o más comúnmente RAM (Random Access Memory)</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.3.3 Memoria Caché
+          </h2>
+          <h5>La memoria caché es un búfer de memoria que funciona de manera similar a la principal, pero es de menor
+            tamaño y su acceso es más rápido.
+            Se sitúa entre el CPU y la memoria de acceso aleatorio (RAM), que ayuda a acelerar el intercambio de datos.
+          </h5>
+        </div>
+        <div class="card">
+          <h2>Nivel 2</h2>
+          <p>Se encarga de almacenar datos de uso frecuente, es mayor que la 1 pero más lenta, pero más rápida que la
+            RAM. Proporciona mayor capacidad y puede contener una copa del nivel 1, además de información extra,
+            diferente a la 1.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Nivel 1</h2>
+          <p>Llamada memoria interna, se encuentra en el núcleo del procesador. Se utiliza para acceder a datos e
+            instrucciones importantes y de uso frecuente. Se divide en dos subniveles: Data cache: Se encarga de
+            almacenar datos usados frecuentemente Instrucción caché: Almacena instrucciones usadas frecuentemente</p>
+        </div>
+        <div class="card">
+          <h3>Nivel 3</h3>
+          <p>Es la más rápida, aún más que la principal, pero más lenta que la 2. Ayuda a que el sistema guarde gran
+            información pero agiliza las tareas. Puede ser también inclusiva; agiliza el acceso que no se pudo localizar
+            en el 1 y 2. Consigue una capacidad mayor</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>1.4 Manejo de la entrada/salida</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.4.1 Módulos de entrada/salida</h2>
+          <h5>Para poder hacer una operación entre el procesador y un periférico, se necesita conectar estos
+            dispositivos a la computadora
+            y gestionar de manera correcta la transferencia de datos. Esto, se puede realizar mediante los sistemas de
+            módulos de Entrada/Salida.
+            Estos módulos están conectados con el procesador y la memoria principal, cada uno controla uno o más
+            dispositivos externos.</h5>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.4.2 Entrada/salida programada</h2>
+          <h5>En esto, el procesador ejecuta un programa que controla toda la operación de E/S (programación,
+            transferencia de datos y finalización).</h5>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Sincronización</h2>
+          <p>El procesador ejecuta un programa que mira constantemente el estado del periférico e indica que esté
+            preparado. Este método suele denominarse como sincronización por encuesta o espera activa..</p>
+        </div>
+        <div class="card">
+          <h3>Intercambio de dato</h3>
+          <p>El procesador, si es una operación de entrada, lee el registro del módulo E/S para recoger el dato y lo
+            guarda en la memoria si es de salida. Se produce bajo el control directo y continuo del programa, como
+            interruptores</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.4.3 Entrada/Salida mediante interrupciones</h2>
+          <h5>Esta técnica pretende evitar que el procesador pare o haga trabajo improductivo, mientras que espera a que
+            el periférico esté preparado para hacer una nueva operación. El hardware de la computadora, necesita tener
+            un conjunto de líneas de control del bus del sistema y de petición de interrupción</h5>
+          <p>Funcionamiento<br><br>
+            1.El procesador ejecuta instrucciones de un programa. Al finalizar cada instrucción comprueba
+            si se ha producido una interrupción.
+            <br><br>
+            2.En caso afirmativo se salva el estado actual del programa (contador del programa y registros)
+            y se salta a ejecutar la rutina de servicio correspondiente.
+            <br><br>
+            3.La rutina de servicio efectúa las operaciones apropiadas en la E/S para realizar
+            la transferencia de datos solicitada.
+            <br><br>
+            4.Al finalizar la rutina de servicio se recupera el estado de la CPU y se continúa ejecutando
+            el programa que se estaba ejecutando antes de la interrupción.
+          </p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Las interrupciones pueden ser:<br>
+            • ENMASCARABLES (se pueden dejar de atender por software)<br>
+            • NO ENMASCARABLES (siempre atendidas).<br>
+            • Dos formas de conocer la dirección/posición (vector) donde se encuentra la rutina de servicio de la
+            interrupción:<br>
+            • Vector de interrupciones siempre FIJO<br>
+            • ó el periférico suministra el vector de interrupción</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.4.5 Acceso directo a memoria</h2>
+          <p>Para programar el DMA hay que enviarle al menos los siguientes datos:<br><br>
+            • Dirección/puerto periférico E/S.<br><br>
+            • Posición/dirección en memoria principal.<br><br>
+            • Tamaño (número de bytes a transferir).<br><br>
+            • Tipo transferencia: lectura o escritura.<br><br>
+
+            <br><br><br><br>
+            • A diferencia del mecanismo por interrupción convencional, una orden DMA puede transferir muchísimos datos
+            de una sola vez. Por lo tanto,
+            el número de interrupciones por byte transferido es mucho menor que con las interrupciones
+            convencionales:<br><br>
+            se gana en rapidez.<br><br>
+            • El procesador no se encarga de la transferencia de datos
+          </p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.4.6 Canales y procesadores de entrada/salida</h2>
+          <h5>Title description, Dec 7, 2017</h5>
+          <p>• Siguiente evolución en los sistemas de E/S:
+            Tener un procesador capaz de interpretar secuencias de operaciones y de esa forma tener bajo su
+            control un mayor número de operaciones y módulos de E/S, cada vez más complejas.<br>
+            • El canal de E/S es un “pequeño” procesador especializado en operaciones de E/S. Si además tiene memoria
+            propia,
+            entonces se lo llama procesador de E/S.
+            <br><br>
+            Para realizar una transferencia de E/S, la CPU primero ha de indicar qué canal de E/S ejecuta un determinado
+            programa.
+            • La CPU también debe definir el área de almacenamiento temporal, establecer una prioridad y establecer las
+            correspondientes acciones en caso de error. El programa a ejecutar está cargado en memoria principal y puede
+            contener
+            instrucciones propias sólo procesables por el canal de E/S.<br>
+            • Después de terminar la operación de E/S, el canal de E/S deja el resultado en un área de memoria y a
+            continuación
+            genera una interrupción para indicar que ha acabado.
+          </p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>1.5 Buses</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.5.1 Tipos de Buses</h2>
+          <p>Existen dos grandes tipos clasificados por el método de envío de la infor paralelo o serial.
+            <br>
+            Hay diferencias en el desempeño y hasta hace unos años se consideraba que el uso apropiado dependía de la
+            longitud
+            física de la conexión: para cortas distancias el bus paralelo, para largas el serial.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Bus Serie</h2>
+          <p>En este los datos son enviados, bit a bit y se reconstruyen por medio de registros o rutinas de software. Está formado
+             por pocos conductores y su ancho de banda depende de la frecuencia. Es usado desde hace menos de 10 años en buses para 
+             discos duros, tarjetas de expansión y para el bus del procesador.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Bus paralelo</h2>
+          <p>Es un bus en el cual los datos son enviados por bytes al mismo tiempo, con la ayuda de varias líneas que
+            tienen funciones fijas. La cantidad de datos enviada es bastante grande con una frecuencia
+            moderada y es igual al ancho de los datos por la frecuencia de función computadores ha sido usado de manera
+            intensiva, desde el bus del procesador, los buses de discos duros, tarjetas de expansión
+            y de vídeo, hasta las impresoras.
+            <br><br>
+            El Front Side Bus de los procesadores Intel es un bus de este tipo y como cualquier bus presenta unas
+            funciones en líneas dedicadas:
+            <br><br>
+            • Las Líneas de Dirección con el que se desea establecer comunicación.
+            • Las Líneas de Control son las encargadas de enviar señales de arbitraje entre los dispositivos. Entre las
+            más importantes están las líneas de interrupción, DMA y los indicadores de estado.
+            • Las Líneas de Datos trasmiten los bits, de manera que por lo general un bus tiene un ancho que es potencia
+            de 2.
+            <br><br>
+            Un bus paralelo tiene conexiones físicas complejas, pero la lógica es sencilla, que lo hace útil en sistemas
+            con poco poder de cómputo. En los primeros microcomputadores, el bus era simplemente
+            la extensión del bus del procesador y los demás integrados “escuchan” la línea de direcciones, en espera de
+            recibir instrucciones. En el PC IBM original, el diseño del bus fue determinante a la
+            hora de elegir un procesador con I/O de 8 bits (Intel 8088), sobre uno de 16 (el 8086), porque era posible
+            usar hardware diseñado para otros procesadores, abaratando el producto.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.5.2 Estructura de los Buses</h2>
+          <p>Los buses se componen de líneas eléctricas que transmiten un “0” (cero voltios) o un “1” (más de cero voltios).
+            <br>
+            • Líneas/bus de datos: camino para transferir datos entre el resto de componentes de un computador. Su anchura (número de
+            líneas eléctricas) suele ser una potencia de dos (8=23, 16=24, 32=25,...).<br>
+            • Líneas/bus de direcciones: designan la posición/dirección de los datos. Son salidas de la CPU/procesador y determinan
+            capacidad de direccionamiento. • Líneas/bus de control: controlan el acceso y uso de las líneas/buses anteriores.</p>
+        </div>
+      </div>
+      </div>
+      <br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>1.5.3 Jerarquía de los buses</h2>
+          <p>Compatibilidad entre buses:
+            Sólo si son eléctricamente idénticos. Las características de los diferentes tipos de buses deben estar normalizadas.
+            Ejemplo: bus PCI, AGP, USB, FireWire...
+            <br><br>
+            Antiguamente sólo existía un bus principal que lo conectaba todo: bus del sistema. Actualmente existe un conjunto de buses
+            conectados entre sí que forman una jerarquía.
+            Facilita la mejora del rendimiento de todo el computador al agrupar dentro de los diferentes tipos de buses aquellos
+            componentes del ordenador que tienen aproximadamente la misma velocidad de transmisión de la información.
+            <br><br>
+            Mientras más lejos del CPU, buses más lentos y normalmente de menos líneas de datos.
+            Existen varios tipos de buses en función de su posición dentro de la jerarquía:<br>
+            • Bus de CPU ó "bus local" del procesador: elementos más rápidos tales como la memoria caché.<br>
+            • Bus local ó bus del sistema (Front Side Bus): conecta elementos tales como la memoria principal o dispositivos rápidos (por ejemplo AGP).<br>
+            • Bus de expansión y/o E/S: PCI, USB, ATA, SCSI, ...</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>1.6 Interrupciones</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>Una interrupción es una situación especial que suspende la ejecución de un programa de modo que el sistema
+            pueda realizar una acción para tratarla. Tal situación se da, por ejemplo, cuando un periférico requiere
+            la atención del procesador para realizar una operación de E/S.<br><br>
+            Una interrupción es el rompimiento en la secuencia de un programa para ejecutar un programa especial
+            llamando una rutina de servicio cuya característica principal es que al finalizar regresa al punto donde
+            se interrumpió el programa.</p>
+        </div>
+        <div class="card">
+          <h2>Tipos de interrupciones</h2>
+          <p>Interrupciones de hardware.
+            Estas son asíncronas a la ejecución del procesador, es decir, se pueden producir en cualquier momento independientemente
+            de lo que esté haciendo el CPU en ese momento.
+            <br><br>
+            Excepciones<br><br>
+            Son aquellas que se producen de forma síncrona a la ejecución del procesador. Normalmente son causadas al realizarse
+            operaciones no permitidas tales como la división entre 0, el desbordamiento, el acceso a una posición de memoria no permitida, etc.
+            <br><br>
+            Interrupciones por software<br><br>
+            Son aquellas generadas por un programa en ejecución. Para generarlas, existen distintas instrucciones en el código
+            máquina que permiten al programador producir una interrupción.</p>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- fin contenedor unidad 1-->
+  </div>
+
+  <div id="News" class="tabcontent">
+    <h1 class="unidad">Unidad 2</h1>
+    <div class="subtitulos">
+      <h2>2.1 Organización del procesador</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>La función principal de un procesador es ejecutar instrucciones y la organización que tiene viene condicionada
+            por las tareas que debe realizar y por cómo debe hacerlo.
+            <br><br>
+            Los procesadores están diseñados y operan según una señal de sincronización.
+            Esta señal, conocida como señal de reloj, es una señal en forma de onda cuadrada periódica con una determinada frecuencia.
+            Todas las operaciones hechas por el procesador las gobierna esta señal de reloj: un ciclo de reloj determina
+            la unidad básica de tiempo, es decir, la duración mínima de una operación del procesador.
+            <br><br>
+            Para ejecutar una instrucción, son necesarios uno o más ciclos de reloj, dependiendo del tipo de instrucción
+            y de los operandos que tenga.
+            <br><br>
+            Las prestaciones del procesador no las determina solo la frecuencia de reloj, sino otras características del procesador,
+            especialmente del diseño del juego de instrucciones y la capacidad que tiene para ejecutar simultáneamente múltiples instrucciones.</p>
+          
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>
+            Para ejecutar las instrucciones, todo procesador dispone de tres componentes principales:
+            <br><br>
+            1) Un conjunto de registros:
+            Espacio de almacenamiento temporal de datos e instrucciones dentro del procesador.
+            <br><br>
+            2) Unidad aritmética y lógica o ALU:
+            Circuito que hace un conjunto de operaciones aritméticas y lógicas con los datos almacenados dentro del procesador.
+            <br><br>
+            3) Unidad de control:
+            Circuito que controla el funcionamiento de todos los componentes del procesador. Controla el movimiento de datos e
+            instrucciones dentro y fuera del procesador y también las operaciones de la ALU.</p>
+        </div>
+
+      </div>
+    </div>
+    <br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>2.2 Estructura de registros</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h5>Los registros vienen de tres tipos: datos, direcciones e índice, que tiene lugar en casi todos los aspectos
+            de la operación del CPU. El tamaño de un registro depende del CPU; los más simples tienen registros que aceptan
+            8 o 16 bits de datos y los más complejos tienen registros de 32, 48 o 64 bits.</h5>
+        </div>
+        <div class="card">
+          <h2>Clasificación de los registros</h2>
+          <p>Registro de datos:
+            Un CPU puede funcionar con datos en uno de tres modos: entre dos registros, entre registros
+            y una ubicación de Memoria de acceso al azar (RAM - Random-Access Memory) y entre dos ubicaciones RAM.
+            Como el CPU está conectado directamente a los registros, las operaciones que implican dos registros son las
+            más rápidas; las que se dan entre ubicaciones RAM son las más lentas. Es decir, junta dos registros, añade un
+            registro a una ubicación RAM, o añade dos ubicaciones RAM.
+            <br><br>
+            Registro de direcciones:
+            Para que un CPU pueda almacenar y recuperar datos en RAM, debe tener la dirección de la memoria de la información.
+            Esas operaciones que implican RAM usan registros de dirección de memoria. EL CPU no realiza aritmética en estos registros;
+            en cambio, los usa para ubicar datos que necesita.</p>
+          
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Registro de índice:
+            Un CPU no puede hacer matemáticas en registros de datos, aunque puede hacerlo indirectamente con un registro de índice.
+            Éste trabaja con los registros de datos, permitiendo a un programa procesar hilos de información eficazmente.
+            <br><br>
+            Registros de segmento:
+            Un registro de segmento tiene 16 bits de longitud y facilita un área de memoria para direccionamiento
+            conocida como segmento actual.<br>
+            • Registro Cs: El dos almacena la dirección inicial del segmento de código de un programa en el registro CS
+            Indica la dirección de una instrucción que es buscada para su ejecución.<br>
+            • Registro Ds: Genera una referencia a la localidad de un byte específico en el segmento de datos.<br>
+            • Registro SS: Permite la colocación en memoria de una pila, para almacenamiento temporal de dirección y datos.<br>
+            • Registro ES: Se utiliza para algunas operaciones con cadenas de caracteres se utiliza para el manejo de direccionamiento de memoria.</p>
+        </div>
+        <div class="card">
+          <p>Registros de propósito general:
+            Los registros de propósito general son el AX, BX, CX, y DX, de 16 bits. Cada uno de ellos se divide en dos
+            registros de 8 bits, llamados AH y AL, BH y BL, CH y CL, y, DH y DL, H significando High (alto) y L significando
+            Low (bajo), indicando la parte alta o la parte baja del registro correspondiente de 16 bits.
+            <br>
+            • Registro AX: El registro es el registro acumulador, es utilizado para operaciones que implican entrada/salida,
+            y multiplicación y división (estas dos últimas en conjunto con el registro DX).<br>
+            • Registro BX: El registro es el registro base, y es el único registro de propósito general que puede ser un índice
+            para direccionamiento indexado.<br>
+            • Registro CX: El registro es conocido como el registro contador. Puede contener un valor para controlar el número de
+            veces que un ciclo se repite o un valor para corrimiento de bits.<br>
+            • Registro DX: El de datos se indica mediante el número de puerto de entrada/salida, y en las operaciones
+            de multiplicación y división de 16 bits.</p>
+          </div>
+        </div>
+        <div class="card">
+          <p>Registros de apuntadores:
+            Los registros SP (apuntador de pila) y BP (apuntador base) están asociados con el registro SS y permiten al sistema acceder
+            a datos en el segmento de la pila.
+            <br>
+            • Registro SP: El apuntador de pila de 16 bits está asociado con el segmento SS y proporciona un valor de desplazamiento que
+            se refiere a la palabra actual que está siendo procesada en la pila.<br>
+            • Registro BP: El apuntador base de 16 bits facilita la referencia de parámetros dentro de la pila.
+            <br>
+            Registros de banderas:<br>
+            Es un registro de 16 bits, de los cuales nueve sirven para indicar el estado actual de la máquina y el resultado del procesamiento.
+            <br>
+            Registro de punteros de instrucción:<br>
+            El registro IP de 16 bits contiene el desplazamiento de dirección de la siguiente instrucción que se ejecuta. El IP está
+            asociado con el registro CS en el sentido de que el IP indica la instrucción actual dentro del segmento de código que se
+            está ejecutando actualmente en la memoria.</p>
+        </div>
+      
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.2.1 Registros visibles para el usuario</h2>
+          <h5>Se dice que un registro es visible al usuario para significar el hecho de que puede ser referenciado
+            por medio del lenguaje máquina que ejecuta la CPU. Se pueden clasificar en las siguientes categorías:
+            • Uso general<br>
+            • Datos<br>
+            • Direcciones<br>
+            • Códigos de condición</h5>
+          <p>Los registros de uso general pueden se asignados por el programador a diversas funciones.
+            A veces, su uso dentro del repertorio de instrucciones es ortogonal a la operación. Es decir, cualquier
+            registro de uso general puedecontener el operando para cualquier código de operación. Esto proporciona
+            una utilización de registros de auténtico uso general. Con frecuencia, sin embargo, existen
+            restricciones, por ejemplo puede haber registros específicos para operaciones con coma flotante
+            y operaciones de pila.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>En algunos casos, los registros de uso general pueden utilizarse para funciones de direccionamiento.
+            En otros casos hay una separación parcial o total entre registros de datos y registros de direcciones,
+            los primeros pueden usarse únicamente para contener datos, y no pueden emplearse en cálculo
+            de una dirección de un operando. Los registros de dirección pueden ser de uso más o menos general,
+            o pueden estar dedicados a un modo de direccionamiento particular. Se pueden citar los siguientes ejemplos:
+            <br>
+            Punteros de segmento: En una máquina con direccionamiento segmentado un registro de segmento
+            contiene la dirección de la base del segmento. Puede haber múltiples registros, por ejemplo uno para el SO
+            y otro para el proceso actual.
+            <br>
+            Registros índices: Se usan para el direccionamiento indexado, y pueden ser auto indexado.
+            <br>
+            Puntero de pila: Si existe direccionamiento a pila visible al usuario, la pila está normalmente
+            en memoria, y hay registro dedicado que apunta a la cabecera de esta. Esto permite el direccionamiento
+            implícito, es decir, apilar, desapilar y otras instrucciones de la pila que no necesitan contener un operando
+            explícito referente a ella.</p>
+        </div>
+        <div class="card">
+          <p>Aquí hay varias cuestiones de diseño a estudiar, una importante es si se usan registros de uso completamente general o si especificar su uso.
+            <br>
+            Con el uso de registros especializados, generalmente puede quedar implícito en el código de la
+            operación a qué tipo de registro se refiere un determinado campo de operando. El campo de operando
+            solo debe identificar uno de entre un conjunto de registros especializados, en lugar de uno de entre todos los registros, lo cual ahorra bits.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.2.2 Registros de control y de estados</h2>
+          <h5>Hay diversos registros del procesador que se emplean para controlar su funcionamiento. La mayoría de ellos, en la mayor parte de las máquinas no son visibles
+            por el usuario, pero alguno de ellos puede ser visible por ciertas instrucciones máquina ejecutadas en un modo
+            privilegiado o de sistema operativo.</h5>
+          <p>Naturalmente, diferentes máquinas tendrán distinta organización de registros y usarán distinta terminología.
+            Son esenciales cuatro registros para la ejecución de una instrucción:</p>
+          <p>• Contador de programa (Program Counter- PC):<br>
+            Contiene la dirección de la instrucción a buscar.<br>
+            • Registro de instrucción (Instruction Register- IR):<br>
+            Contiene la instrucción buscada mas recientemente.<br>
+            • Registro de dirección de memoria (Memory Address Register- MAR):<br>
+            Contiene la dirección de una posición de memoria.<br>
+            • Registro amortiguador de memoria (Memory Buffer Register - MBR):<br>
+            Contiene el dato a escribir en una posición de memoria o el dato contenido en una posición de memoria leído más recientemente</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>No todos los procesadores tienen registros internos designados como MAR o MBR pero se necesita algún
+            mecanismo de almacenamiento intermedio equivalente mediante el cual se de salida a los bits que van a
+            ser transferidos por el bus de sistema se almacenen los bits leídos por el bus de datos.</p>
+        </div>
+        <div class="card">
+          <p>Típicamente, el procesador actualiza el PC luego de cada búsqueda de instrucción, de manera que siempre
+            apunte a la siguiente instrucción a ejecutar. Una instrucción de bifurcación o salto también modificará
+            el valor del registro PC. La instrucción buscada se carga en IR, donde son analizados los códigos de operación
+            y los campos de operando. Se intercambian datos con la memoria por medio del MAR y el MBR. El MAR se conecta
+            con el bus de direcciones y el MBR con el bus de datos. Los registros visibles por el usuario repetidamente cambian datos con MBR.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.2.3 Ejemplos de registros de CPU reales</h2>
+          <p>Resulta instructivo examinar y comparar las organizaciones de registros desistemas análogos. En esta sección, examinamos
+            microprocesadores de 16bits que fueron diseñados aproximadamente al mismo tiempo: el MotorolaMC68000 [STRI79] y
+            el lntel 8086 [MORS78].</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>El MC68000 distribuye sus registros de 32 bits en ocho de datos y nueve de direcciones. Los ocho registros de datos
+            se usan principalmente paramanipulación de datos y también se usan en direccionamiento como registrosíndice.
+            El Intel 8086 usa un enfoque diferente para la organización de los registros. Cada uno de los registros tiene un
+            uso especial, aunque algunos registros se puedenemplear también para un uso general. El 8086 contiene cuatro registros
+            de datos de 16 bits que son direccionables como registros de bytes o como registros de 16bits, y cuatro registros punteros
+            e índices de 16 bits. Los registros de datos pueden utilizarse como de uso general en algunas instrucciones. En otras,
+            los registros se usan implícitamente.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>2.3 El ciclo de instrucción</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.3.1 Ciclo Fetch-Decode-Execute</h2><br>
+          <p>1.- Buscar la instrucción en la memoria principal<br>
+            • Se vuelca el valor del contador de programa sobre el bus de direcciones.<br>
+            • Entonces la CPU pasa la instrucción de la memoria principal a través del bus de datos al Registro de Datos de Memoria (MDR).<br>
+            • A continuación el valor del MDR es colocado en el Registro de Instrucción Actual (CIR), un circuito que guarda la instrucción
+            temporalmente de manera que pueda ser decodificada y ejecutada.
+            <br><br>
+            2.- Decodificar la instrucción<br>
+            • El decodificador de instrucción interpreta e implementa la instrucción.<br>
+            • El registro de instrucción (IR) mantiene la instrucción en curso mientras el contador de programa (PC, program counter)
+            guarda la dirección de memoria de la siguiente instrucción a ser ejecutada.<br>
+            • Recogida de datos desde la memoria principal<br>
+            • También se lee la dirección efectiva de la memoria principal si la instrucción tiene una dirección indirecta, y se recogen
+            los datos requeridos de la memoria principal para ser procesados y colocados en los registros de datos.</p>
+        </div>
+        <div class="card">
+          <p>Ciclo de búsqueda<br>
+          • Los pasos 1 y 2 del ciclo de instrucción se conocen como ciclo de búsqueda (fetch). Estos pasos son idénticos
+          en todas las instrucciones.<br>
+          • El ciclo de búsqueda procesa la instrucción a partir de la palabra de instrucción, que contiene el código de operación
+          y el operando.
+          <br>
+          Ciclo de ejecución.<br>
+          Los pasos 3 y 4 del ciclo de instrucción se conocen como ciclo de ejecución. Estos pasos cambiarán con cada tipo de instrucción.
+          • El primer paso del ciclo de ejecución es el proceso de memoria, en que los datos se transfieren entre la CPU y el módulo
+          de entrada/salida (I/O).<br>
+          • A continuación se produce el proceso de datos, que usa operaciones matemáticas así como operaciones lógicas en referencia
+          a los datos.<br>
+          • Después tiene lugar el paso de alteraciones centrales, que son una secuencia de operaciones, por ejemplo una operación de
+          salto. El último paso es una operación combinada de todos los otros pasos.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>3.- Ejecutar la instrucción<br>
+            • A partir del registro de instrucción, los datos que forman la instrucción son decodificados por la unidad de control.<br>
+            • Ésta interpreta la información como una secuencia de señales de control que son enviadas a las unidades funcionales
+            relevantes de la CPU para realizar la operación requerida por la instrucción.<br>
+            <br><br>
+            4.- Almacenar o guardar resultados<br>
+            • El resultado generado por la operación es almacenado en la memoria principal o enviado a un dispositivo de salida
+            dependiendo de la instrucción.<br>
+            • Basándose en los resultados de la operación, el contador de programa se incrementa para apuntar a la siguiente
+            instrucción o se actualiza con una dirección diferente donde la próxima instrucción será recogida.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.3.2 Segmentación de instrucciones</h2><br>
+          <p>Es una técnica que permite implementar el paralelismo a nivel de instrucción en un único procesador. La segmentación
+            intenta tener ocupadas con instrucciones todas las partes del procesador dividiendo las instrucciones en una serie
+            de pasos secuenciales que efectuarán distintas unidades de la CPU, tratando en paralelo diferentes partes de las
+            instrucciones. Permite una mayor tasa de transferencia efectiva por parte de la CPU que la que sería posible a una
+            determinada frecuencia de reloj, pero puede aumentar la latencia debido al trabajo adicional que supone el propio
+            proceso de la segmentación.</p>
+        </div>
+        <div class="card">
+          <p>Conforme la segmentación se hace más "profunda" (aumentando el número de pasos dependientes), un paso determinado
+            puede implementarse con circuitería más simple, lo cual puede permitir que el reloj del procesador vaya más rápido.
+            <br>
+            En inglés, las segmentaciones de este tipo pueden llamarse superpipelines.
+            <br>
+            Se dice que un procesador está totalmente segmentado si puede leer una instrucción en cada ciclo. Por tanto, si
+            ciertas instrucciones o condiciones requieren un retardo que impide la lectura de nuevas instrucciones, el procesador
+            no está totalmente segmentado.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>El número de pasos dependientes varían según la arquitectura de la máquina. Algunos ejemplos:
+            <br>
+            • Entre 1956 y 1961, el proyecto IBM stretch proponía los términos Fetch (Lectura), Decode (Decodificación) y Execute
+            (Ejecución) que se convirtieron en habituales.<br>
+            • La segmentación RISC clásica comprende:<br>
+            1. Lectura de instrucción<br>
+            2. Decodificación de instrucción y lectura de registro<br>
+            3. Ejecución<br>
+            4. Acceso a memoria<br>
+            5. Escritura de vuelta en el registro<br>
+            • Las microcontroladoras Atmel AVR y PIC disponen cada una de segmentación de dos etapas.<br>
+            • Muchos diseños incluyen segmentación de 7, 10 e incluso 20 etapas (como es el caso del Pentium 4 de Intel).<br>
+            • Los núcleos "Prescott" y "Cedar Mill" de la microarquitectura NetBurst de Intel, utilizados en las versiones más
+            recientes del Pentium 4 y sus derivados Pentium D y Xeon, tienen una segmentación de 31 etapas.<br>
+            • El "Xelerated X10q Network Processor" cuenta con una segmentación de más de 1000 etapas, si bien en este caso
+            200 de estas etapas representan CPU independientes con instrucciones programadas de forma individual. Las etapas
+            restantes se usan para coordinar los accesos a la memoria y las unidades funcionales presentes en el chip.​</p>
+        </div>
+        
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.3.3 Conjunto de instrucciones, características y funciones</h2><br>
+          <p>Ante el diseño de un nuevo ordenador de propósito general hay que plantearse la siguiente cuestión: ¿Qué tipos de
+            instrucciones deben ser incluidos en su conjuntos de instrucciones? Antes de responder a esta pregunta, analizaremos
+            las características que deben tener los juegos de instrucciones de las máquinas. Los conjuntos de instrucciones de
+            las máquinas deben tender a poseer una serie de propiedades, bastante ideales e imprecisas, que pueden resumirse en
+            las siguientes: El conjunto de instrucciones de un computador debe ser completo en el sentido de que se pueda construir
+            un programa para evaluar una función computable usando una cantidad de memoria razonable y empleando un tiempo moderado,
+            es decir, el número de instrucciones de ese programa no debe ser demasiado elevado. Los juegos de instrucciones también
+            tienen que ser eficientes, esto significa que las funciones más necesarias deben poder realizarse usando pocas instrucciones.
+            El conjunto de instrucciones de una máquina debe ser regular, es decir debe ser simétrico (por ejemplo, si existe una
+            instrucción de desplazamiento a la izquierda, debe haber otra de desplazamiento a la derecha, etc.) y ortogonal, es decir,
+            deben poder combinarse, en la medida de lo posible, todos las operaciones con todos los tipos de datos y modos de
+            direccionamiento. En muchas ocasiones, también se le debe exigir a un computador que su juego de instrucciones sea
+            compatible con modelos anteriores.</p>
+        </div>
+      </div>
+        <div class="rightcolumn">
+        <div class="card">
+          <h3>Tipos de instrucciones</h3>
+          <p>Una máquina puede llegar a funcionar con un juego de instrucciones muy limitado (recuérdese, por ejemplo, la máquina
+            de Turing que sólo tiene 4 instrucciones, incluso se han diseñado máquinas teóricas con menos instrucciones), esto
+            simplificaría mucho los circuitos de la máquina. Sin embargo, un conjunto de instrucciones demasiado simplificado origina,
+            como consecuencia, unos programas demasiado complejos e ineficientes. Es necesario encontrar un compromiso entre la
+            simplicidad del hardware y del software. Un mínimo para llegar a ese compromiso se consigue con los tipos de instrucciones
+            siguientes: Instrucciones de transferencia de datos. Instrucciones aritméticas. Instrucciones lógicas. Instrucciones de
+            control del flujo del programa (bifurcaciones, bucles, procedimientos, etc.) Instrucciones de entrada y salida. En los
+            apartados siguientes iremos viendo con detalle algunos de estos tipos de instrucciones. Si bien es cierto que el conjunto
+            de instrucciones debe de cumplir unos mínimos para conseguir una mínima eficiencia en los programas, también se verá que
+            ésta no se aumenta indefinidamente al incrementar el número de instrucciones de la máquina.</p>
+        </div>
+        </div>
+      
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>2.3.4 Modos de direccionamiento</h2>
+          <h5>Son las diferentes maneras de especificar un operando dentro de una instrucción. Un modo de direccionamiento especifica
+            la forma de calcular la dirección de memoria efectiva de un operando mediante el uso de la información contenida en
+            registros dentro de una instrucción de la máquina.</h5>
+          <p>Direccionamiento implícito<br>
+            Depende solamente de la instrucción, es decir, la instrucción no lleva parámetros.
+            Particularmente en instrucciones que no accesan memoria, o bien que tienen una forma específica de accesarla.
+            Ejemplos: PUSHF, POPF, NOP
+            <br>
+            Modo registro<br>
+            Usa solamente registros como operandos
+            Es el más rápido, pues minimiza los recursos necesarios (toda la información fluye dentro del EU del CPU)
+            Ejemplo: MOV AX, BX</p>
+        </div>
+        <div class="card">
+          <p>Modo indirecto<br>
+          Se usan los registros SI, DI como apuntadores
+          El operando indica una localidad de memoria, cuya dirección (sólo la parte desplazamiento) está en SI o DI.
+          Es más lento que los anteriores, pues tiene que “calcular” la localidad
+          Ejemplos:<br>
+          MOV AL, [SI]<br>
+          MOV BL, ES:[SI] ; Aquí se dice que se usa un “segment override”, donde se indica que en vez de usar el segmento
+          de datos por defecto, se use en su lugar como referencia el segmento extra.<br><br>
+          
+          Modo indexado de base
+          Formato:<br><br>
+          [
+          BX o BP<br>
+          + SI o DI (opcionales)<br>
+          + constante (opcional)<br>
+          ]<br>
+          BX o BP indica una localidad base de la memoria
+          A partir de BX o BP, se puede tener un desplazamiento variable y uno constante
+          La diferencia es el segmento sobre el que trabajan por defecto:<br>
+          BX por defecto en el segmento de datos<br>
+          BP por defecto en el segmento de pila.<br>
+          Ejemplos:<br>
+          MOV AX, [BX]<br>
+          MOV DX, [BX+2]<br>
+          MOV CX, [BX+DI]<br>
+          MOV DL, [BX+SI+3]</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Modo inmediato<br>
+            Tiene dos operandos: un registro y una constante que se usa por su valor.<br>
+            El valor constante no se tiene que buscar en memoria, pues ya se obtuvo al hacer el “fetch” de la instrucción.
+            Ejemplo:MOV AH, 9<br>
+            <br>
+            Modo directo<br>
+            Uno de los operandos involucra una localidad específica de memoria
+            El valor constante se tiene que buscar en memoria, en la localidad especificada.<br>
+            Es más lento que los anteriores, pero es el más rápido para ir a memoria, pues ya “sabe” la localidad, la toma
+            de la instrucción y no la tiene que calcular.<br>
+            Ejemplo: MOV AH, [0000]<br>
+            MOV AH, Variable<br>
+            Estas dos instrucciones serían equivalentes, si Variable está, por ejemplo, en la localidad 0 de memoria.<br>
+            En la forma primitiva del lenguaje de máquina, como el primer ejemplo, se tiene que indicar “mover a AH el contenido
+            (indicado por los corchetes), de la localidad 0 de los datos (lo de los datos es implícito). El lenguaje Ensamblador,
+            sin embargo, nos permite la abstracción del uso de variables, pero como una variable tiene una localidad determinada en
+            memoria, para el procesador funciona igual. La única diferencia consiste en que el programador no tiene que preocuparse
+            por la dirección, ese manejo lo hace automáticamente el Ensamblador.</p>
+        </div>
+       </div>
+    </div>
+    <!------>
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h1 class="unidad">Unidad 3</h1>
+
+    <div class="subtitulos">
+      <h2 id="modelos">3.1 Chip Set </h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>Chipset es el nombre que se le da al conjunto de chips (o circuitos integrados) utilizado en la placa madre y cuya
+            función es realizar diversas funciones de hardware, como control de los Bus (PCI, AGP y el antiguo ISA), control y
+            acceso a la memoria, control de la interfaz I/O y USB, Timer, control de las señales de interrupción IRQ y DMA, entre otras.</p>
+          
+        </div>
+        <div class="card">
+          <h2>Función del Chipset</h2>
+          <p>Dicho de forma más técnica, el Chipset se encarga de entablar la conexión correcta entre la placa madre y diversos
+            componentes esenciales de la PC, como lo son el procesador, las placas de video, las memorias RAM y ROM, entre otros.
+            <br>
+            Por este motivo, la existencia del chipset es fundamental para que nuestra computadora funcione, ya que es el encargado
+            de enviar las órdenes entre la motherboard y el procesador, para que ambos componentes puedan lograr trabajar con armonía.
+            <br>
+            En otras palabras, es este pequeño elemento el que permite que la motherboard sea el eje principal de todo el sistema de
+            hardware de nuestra PC, y permite la comunicación constante entre diversos componentes, a través del uso de los buses.
+            <br>
+            Por otra parte, el chipset mantiene una comunicación directa y permanente con el procesador, y se encarga de administrar
+            la información que ingresa y egresa a través del bus principal del procesador. Incluso su función se extiende a las memorias
+            RAM y ROM y a las placas de video.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.1 Unidad Central de Procesamiento (CPU)</h2>
+          <p>Significa "Unidad Central de Procesamiento". La CPU es el componente principal de una computadora que procesa instrucciones.
+            Ejecuta el sistema operativo y las aplicaciones , recibiendo constantemente información del usuario o de los programas de
+            software activos. Procesa los datos y produce una salida , que puede ser almacenada por una aplicación o mostrada en la pantalla.</p>
+        </div>
+        </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Los componentes de la CPU son:
+            <br>
+            • Unidad aritmético lógica (ALU):<br>
+            realiza operaciones aritméticas y lógicas.<br>
+            • Unidad de control (CU):<br>
+            dirige el tráfico de información entre los registros de la CPU y conecta con la ALU las
+            instrucciones extraídas de la memoria.<br>
+            • Registros internos:<br>
+            no accesibles (de instrucción, de bus de datos y bus de dirección) y accesibles de uso específico
+            (contador programa, puntero pila, acumulador, flags, etc.) o de uso general.</p>
+        </div>
+    </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.2 Controlador del Bus</h2>
+          <h5>Un bus de control es un bus de computadora que utiliza la CPU para comunicarse con los dispositivos que se encuentran
+            dentro de la computadora. Esto ocurre a través de conexiones físicas como cables o circuitos impresos.</h5>}
+          <p>
+            La CPU transmite una variedad de señales de control a componentes y dispositivos para transmitir señales de control
+            a la CPU utilizando el bus de control. Uno de los principales objetivos de un autobús es minimizar las líneas necesarias
+            para la comunicación. Un bus individual permite la comunicación entre dispositivos utilizando un canal de datos. El bus
+            de control es bidireccional y ayuda a la CPU a sincronizar las señales de control con los dispositivos internos y los
+            componentes externos. Se compone de líneas de interrupción, líneas de habilitación de bytes, señales de lectura / escritura
+            y líneas de estado.</p>
+        </div>
+        <div class="card">
+          <p>La comunicación entre la CPU y el bus de control es necesaria para ejecutar un sistema competente y funcional.
+            Sin el bus de control, la CPU no puede determinar si el sistema está recibiendo o enviando datos. Es el bus de
+            control que regula en qué dirección debe ir la información de lectura y escritura. El bus de control contiene una
+            línea de control para escribir instrucciones y una línea de control para leer instrucciones. Cuando la CPU escribe
+            datos en la memoria principal, transmite una señal a la línea de comando de escritura. La CPU también envía una señal
+            a la línea de comando de lectura cuando necesita leer. Esta señal permite que la CPU reciba o transmita datos desde la
+            memoria principal.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Aunque una CPU puede tener su propio conjunto distintivo de señales de control, algunos controles son comunes a todas las CPU:
+            <br>
+            Líneas de solicitud de interrupción (IRQ): línea de hardware utilizada por los dispositivos para interrumpir las señales a la
+            CPU. Permite que la CPU interrumpa su trabajo actual para procesar la solicitud actual.
+            <br>
+            Línea de control del reloj del sistema: proporciona la sincronización interna para varios dispositivos en la placa base y la CPU.
+            <br>
+            La mayoría de los buses del sistema se componen de 50 a 100 líneas distintas para la comunicación. El bus del sistema consta
+            de tres tipos de buses:
+            <br>
+            • Bus de datos: transporta los datos que necesitan procesamiento.<br>
+            • Bus de direcciones: determina a dónde se deben enviar los datos<br>
+            • Bus de control: determina el procesamiento de datos</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.3 Puertas de Entrada Salida E/S</h2>
+          <p>Para hacer una operación de E/S entre el computador y un periférico, es necesario conectar estos dispositivos
+            al computador y gestionar de manera efectiva la transferencia de datos. Para hacerlo, el computador dispone del
+            sistema de entrada/salida(E/S).</p>
+        </div>
+        <div class="card">
+          <p>Dada la gran variedad de periféricos, es necesario dedicar un hardware y un software específicos para cada uno.
+            Por este motivo se ha intentado normalizar la interconexión de los periféricos y el computador mediante lo que
+            se denomina módulos de E/S o controladores de E/S. Eso nos permite tener, por una parte, una conexión, entre el
+            módulo de E/S y el periférico, específica y con unas características propias que difícilmente se pueden generalizar
+            para utilizarlas en otros dispositivos y, por otra parte, una conexión entre los módulos de E/S y el computador
+            común a todos los controladores, pero estos módulos, además de permitir la conexión de los periféricos al computador,
+            disponen de la lógica necesaria para tener cierta capacidad de procesamiento y gestionar las transferencias de información.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Este sistema de E/S es la interfaz que tiene el computador con el exterior y el objetivo que tiene es facilitar
+            las operaciones de E/S entre los periféricos y la memoria o los registros del procesador. Para gestionar las
+            operaciones de E/S es necesario un hardware y la ayuda de un software.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.4 Controlador de Interrupciones</h2>
+          <p>La unidad central de procesamiento o CPU o simplemente el procesador o microprocesador, es el componente en una
+            computadora digital que interpreta las instrucciones y procesa los datos contenidos en los programas de la computadora.
+            La CPU proporciona la característica fundamental de la computador digital (la programabilidad) y son uno de los componentes
+            necesarios encontrados en las computadoras de cualquier tiempo, junto con el almacenamiento primario y los dispositivos de
+            /salida. Se conoce como microprocesador el CPU que es manufacturado con circuitos integrados. Desde mediados de los años 1970,
+            los microprocesadores de un solo chip ha reemplazado casi totalmente todos los tipos de CPU, y hoy en día el termino “CPU” es
+            aplicado usualmente a todos los microprocesadores. La expresión “unidad central de proceso” es, en términos generales, una
+            descripción de una cierta clase de maquinas de lógica que pueden ejecutar complejos programas de computadoras.
+            Esta amplia definición puede fácilmente ser aplicada a muchos de los primeros ordenadores que existieron mucho antes que
+            el termino “CPU” estuviera en amplio uso. Sin embargo, el termino en si mismo y su acrónimo han estado en uso en la industria
+            de la informática por lo menos desde el principio de los años 1960. La forma, el diseño y la implementación de las CPU han
+            cambiado drásticamente desde los primeros ejemplos, pero su operación fundamental ha permanecido bastante similar.
+            El CPU es el corazón del microprocesador, es el encargado de decodificar las instrucciones, hacer mas eficientes las
+            operaciones aritméticas, y controlar algunas otras partes de la maquina. Cuenta con cuatro partes básicas.<br>
+            1. Registros.<br>
+            2. Unidad Aritmética y lógica.<br>
+            3. Circuito de Temporización y control.<br>
+            4. Circuito de decodificación.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Las interrupciones añaden cierta complejidad al diseño del hardware: en principio, es necesario jerarquizarlas de alguna
+            manera para decidir cuál se atiende en el caso de que se produzcan dos simultáneamente. También es importante el control
+            de prioridad para el caso de que se produzca una interrupción mientras se está procesando otra: sólo se la atenderá si es
+            de mayor prioridad. En este capítulo sólo consideraremos las interrupciones hardware, no las de software ni las excepciones
+            del procesador.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.5 Controlador de Acceso Directo a Memoria(DMA)</h2>
+          <p>Direct Memory Access o DMA. El acceso directo a memoria es una características de las computadoras y microprocesadores
+            modernos que permite que ciertos subsistemas de hardware dentro de la computadora puedan acceder a la memoria del sistema
+            para la lectura y/o escritura, independientemente de la unidad central de procesamiento (CPU). De lo contrario, la CPU
+            tendría que copiar cada porción de dato desde el origen hacia el destino, haciendo que ésta no esté disponible para otras tareas.</p>
+        </div>
+        <div class="card">
+          <h2>Características generales del DMA</h2>
+          <p>Aquellas computadoras que tienen canales DMA pueden transferir datos desde y hacia los dispositivos con menos utilización
+            de CPU que aquellas computadoras sin canales DMA. Básicamente una transferencia DMA consiste en copiar un bloque de memoria
+            de un dispositivo a otro. Esa transferencia se lleva a cabo por el controlador DMA, en lugar del CPU. El controlador DMA es
+            generalmente un chipset de la placa madre.<br>
+            En computadoras sin DMA, el CPU generalmente se ocupa completo durante toda la operación de lectura o escritura de la memoria
+            y, por lo tanto, no está disponible para realizar otras tareas. Con DMA, el CPU puede iniciar la transferencia, luego realizar
+            otras operaciones mientras la transferencia está en progreso y luego recibir una interrupción del controlador de DMA una vez
+            que la transferencia termina.
+            <br><br>
+            Sin DMA se utiliza el modo PIO para la comunicación de periféricos con la memoria y de instrucciones de load/store en el caso
+            de chips con multinúcleos.
+            <br><br>
+            DMA es útil en aplicaciones en tiempo real y en el procesamiento de flujos de datos.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Los subsistemas de hardware que utilizan DMA pueden ser: controladores de disco duro, tarjetas gráficas, tarjetas de red,
+            de sonido y tarjetas aceleradoras. También es utilizado para la transferencia de datos dentro del chip en procesadores
+            múltiples núcleos. DMA es esencial en los sistemas integrados.</p>
+        </div>
+        <div class="card">
+          <h3>Tipos de transferencia DMA o Acceso directo a memoria</h3>
+          <p>• DMA por robo de ciclo: es uno de los métodos más usados, ya que requiere poca utilización del CPU. Esta estrategia utiliza
+            uno o más ciclos de CPU para cada instrucción que se ejecuta. Esto permite alta disponibilidad del bus del sistema para la
+            CPU, aunque la transferencia de datos se hará más lentamente.<br>
+            • DMA por ráfagas: esta estrategia consiste en enviar el bloque de datos solicitado mediante una ráfaga empleando el bus del
+            sistema hasta finalizar la transferencia. Permite una altísima velocidad, pero la CPU no podrá utilizar el bus de sistema
+            durante el tiempo de transferencia, por lo que permanece inactiva.<br>
+            • DMA transparente: esta estrategia consiste en emplear el bus del sistema cuando la CPU no lo necesita. Esto permite que la
+            transferencia no impida que la CPU utilice el bus del sistema; pero la velocidad de transferencia es la más baja posible.
+            • DMA Scatter-gather: esta estrategia permite transmitir datos a varias áreas de memoria en una transacción DMA simple.
+            Equivale al encadenamiento de múltiples peticiones DMA simples. Su objetivo es librar a la CPU la tarea de la copia de
+            datos e interrupciones de entrada/salida múltiples.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.6 Circuitos de temporización</h2>
+          <h5>Motherboard</h5>
+          <p>Es un circuito impreso que nos permite el alojamiento de los demás componentes permitiendo que interactúen entre si
+            y puedan realizar procesos.</p>
+        </div>
+        <div class="card">
+          <p>Reloj de una computadora<br>
+            Se utiliza para funciones principales:<br>
+            Para sincronizar las diversas operaciones que realizan los diferentes subcomponentes del sistema informático.
+            Para saber la hora.<br>
+            Marca la velocidad de proceso de la computadora generando una señal periódica que es utilizada por todos los componentes
+            de la computadora.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>¿Que es el temporizador?
+            Es un circuito que se encuentra en la tarjeta madre del PC y que es capaz de mantener una cuenta de tiempo basada en
+            el reloj de la computadora.
+            <br><br>
+            La finalidad de la temporización es retardar el paso de una señal desde un nodo del circuito hasta otro punto, el diseño
+            de este circuito se realiza con un dispositivo que se conoce con el nombre de "monoestable" ó "temporizador".
+            <br><br>
+            Contadores independientes
+            - El contador 0 significa que la hora es exactamente las 24:00hrs y entonces se inicializa a cero.<br>
+            - El contador 1 es usado por el PC para realizar el proceso de refrescamiento de memoria.<br>
+            - El contador 2 generalmente se encuentra programado para trabajar con la bocina.<br>
+            - Los primeros dos contadores (0 y 1) envían una interrupción a la CPU, que el 2 no hace.<br>
+            <br>
+            La acción generada por los contadores independientes provoca una interrupción llamada interrupción del contador,
+            la cual interrumpe brevemente al CPU e incrementa la cuenta del día.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.7 Circuitos de Control</h2>
+          <h5>El circuito de control es la parte más delicada de la controladora, ya que se encarga de controlar la entradas
+            (Puerto LPT, Entradas Analógicas, Entradas Digitales y circuito de potencia) y las salidas (Salidas Digitales).</h5>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>El circuito de control de la controladora CNICE está divido en varios bloques que más adelante serán explicados en profundidad:
+            <br>
+            El primer bloque es el circuito analógico que sirve para poder manejar componentes analógicos de baja potencia por ejemplo
+            una resistencia LDR. Este bloque está formado por cuatro entradas analógicas A0 a A3, cuyo valor es regulado por el
+            dispositivo de entrada hasta un máximo de 5 voltios.</p>
+        </div>
+        <div class="card">
+          <h2>Componentes</h2>
+          <p>• Circuito Analógico: En el circuito analógico nos encontramos con 4 entradas analógicas en las que podremos conectar
+            cualquier dispositivo analógico:
+            <br>
+            • Resistencias: Limitan la corriente de entrada a los diodos y al Switch, estas resistencias son 1/2W y de un valor de 100 ohmios.
+            • Diodos rectificadores: Son utilizados para proteger al circuito de corrientes inversas.
+            • Diodos Zener 5,1v: Es un elemento estabilizador, el cual entra en funcionamiento cuando la tensión zener es superior a 5,1v.
+            Por lo tanto en esta parte del circuito, el diodo zener mantendria la tensión de 5,1v cuando haya tensiones superiores. Si en
+            el circuito analógico hay una tensión inferior a la tensión zener entonces existirá la tensión que se esté aplicando.
+            • CD4066bc: Este circuito integrado es un switch para la transmisión o multiplexación de señales analógicas o digitales.
+            El Switch tiene 8 patillas de Entrada/Salida. En este caso las entradas analógicas son OUT/IN y las salidas IN/OUT.
+            Las salidas analógicas se unen para formar una unica señal analógica que será la que vaya al conversor analógico/digital.
+            Las entradas de control las utilizaremos para seleccionar el switch que queremos habilitar, es decir, con las entradas de
+            control activaremos la entrada donde estará conectado el dispositivo analógico.
+            Si observamos este circuito integrado, no es más que una serie de interruptores internos que son activados o desactivados
+            dependiendo de nuestras necesidades.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>El segundo bloque es el circuito digital que se puede dividir en otros bloques de nivel inferior:
+            <br>
+            • Bloque de control de habilitaciones: es el encargado de activar y desactivar las habilitaciones de los integrados.
+            • Bloque de control de datos: esta parte del circuito se encarga de manejar los datos de entrada y de salida. En este
+            bloque también entraría los conectores de entrada y de salida de datos (ocho entradas digitales E0 a E7, cuyo valor
+            lógico pasa de 0 a 1 cuando se conectan a 5 voltios y ocho salidas digitales S0 a S7, de valor 0 ó 5 voltios).</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.1.8 Controladores de video</h2>
+          <p>Un controlador de vídeo o VDC es un circuito integrado que es elprincipal componente de un generador de señal de vídeo,
+            un dispositivo encargado de la producción de una señal de vídeo en informática o unsistema de juego. Algunos de Desarrollo
+            de Aldea también generar unabuena señal, pero en ese caso no es su función principal. La mayoría delos CDA se utilizan a
+            menudo en la antigua casa-ordenadores de los años80, sino también en algunos de los primeros sistemas de video juego.</p>
+        </div>
+        <div class="card">
+          <h2>Tipos de controladores de vídeo</h2>
+          <p>
+            • A CRTC, o CRT Contralor, genera los tiempos de video y lee los datos de vídeo RAM de un adjunto a la CRTC, a la salida externa
+            a través de un generador de caracteres ROM, (para los modos de texto) o directamente, (para gráficos de alta resolución modos)
+            a la salida de vídeo registro de desplazamiento. Debido a que la capacidad real del vídeo generador dependerá en gran medida de
+            la lógica externa, el generador de vídeo basado en un chip CRTC puede tener una amplia gama de capacidades. De muy sencilla (sólo
+            en modo texto) los sistemas de muy alta resolución, sistemas de apoyo a una amplia gama de colores. Sin embargo se sprites
+            normalmente no recibió el apoyo de estos sistemas.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Tipos de controladores de vídeo</h2>
+          <p>• Cambiadores de vídeo, o “cambio de registro de vídeo basado en los sistemas”: son el tipo más simple de los controladores de
+            video, que se encargan de la sincronización de señales de vídeo, pero normalmente no tienen acceso a la RAM de vídeo directamente.
+            Consiguen el vídeo los datos de la CPU principal, un byte a la vez, y convertirlo en una serie poco corriente (de ahí el nombre
+            técnico “cambiador de vídeo”). Esta serie de flujo de datos se utiliza, junto con la sincronización de las señales, a la salida
+            de un (color) de señal de vídeo. Las principales necesidades de la CPU para hacer la mayor parte de la obra. Normalmente, estos
+            chips sólo un apoyo muy baja resolución modo de gráficos de trama.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>3.2 Aplicaciones</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.2.1 Entrada/Salida</h2>
+          <h5>Title description, Dec 7, 2017</h5>
+          <p>Se consideran aplicación de entrada y salida tanto a las unidades o dispositivos a través delos cuales la computadora se
+            comunica con el mundo exterior, como a los sistemas que almacenan o archivan la información, sirviendo de memoria auxiliar
+            de la memoria principal.
+            <br><br>
+            A través de las aplicaciones podemos introducir a la computadora datos que nos sea útiles para la resolución de algún
+            problema y por consiguiente obtener el resultado de dichas operaciones, es decir; poder comunicarnos con la computadora.
+            <br><br>
+            La computadora necesita de entradas para poder generar salidas y éstas se dan a través de dos tipos de aplicaciones existentes:
+            • Aplicaciones de entrada.<br>
+            • Aplicaciones de salida.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Aplicaciones de entrada</h2>
+          <div class="fakeimg" style="height:100px;">Image</div>
+          <p>Son los que permiten introducir los datos a la computadora para su posterior tratamiento por parte del CPU.<br>
+            Estos datos pueden provenir de distintas fuentes, siendo la principal un ser humano. Los periféricos de entrada más habituales son:<br><br>
+            • Teclado<br>
+            • Micrófono<br>
+            • Escáner<br>
+            • Ratón o mouse<br>
+            • Palanca de mando (Joystick)<br>
+            • Escáner de código de barras<br>
+            • Cámara web<br>
+            • Lápiz óptico<br>
+            • Cámara digital</p>
+        </div>
+        <div class="card">
+          <h3>Aplicaciones de salida</h3>
+          <p>Son los que reciben la información procesada por la CPU y la reproducen, de modo que sea perceptible por el usuario.<br>
+            Algunos ejemplos son:<br>
+            • Visualizador<br>
+            • Monitor<br>
+            • Impresora<br>
+            • Fax<br>
+            • Tarjeta de sonido<br>
+            • Altavoz<br>
+            • Proyector digital<br>
+            • Auriculares</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.2.2 Almacenamiento</h2>
+          <h5>Son dispositivos que conectados a la computadora, permiten el almacenamiento de archivos. En general, hacen referencia
+            a almacenamiento masivo, es decir, de grandes cantidades de datos.</h5>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Las unidades de almacenamiento pueden ser externas o internas a la computadora.
+            <br>
+            Las unidades de almacenamiento también pueden hacer referencia a las unidades lógicas de almacenamiento.
+            <br>
+            Algunas unidades de almacenamiento son:<br>
+            • Disco duro<br>
+            • Disquetera<br>
+            • Unidad de discos ópticos:<br>
+            • (CD-ROM, DVD,HDDVD,BluRay)<br>
+            • Memoria flash.<br>
+            • Unidad de cinta magnética</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.2.3 Fuentes de Alimentación</h2>
+          <h5>a fuente de alimentación de una PC es la encargada de suministrar la energía que todos los componentes y periféricos
+            necesitan para hacer su trabajo, y es una pieza increíblemente compleja y precisa, ya que además de suministrar la energía
+            necesaria, lo hace de manera perfecta y contante.</h5>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Etapas</h2>
+          <p>Etapa de transformación<br>
+            Esta etapa consta básicamente de un transformador que esta formado por un bobinado primario y uno o varios bobinados secundario,
+            que tiene como función principal convertir la energía eléctrica alterna de la red , en energía alterna de otro nivel de voltaje,
+            por medio de la acción de un campo magnético. Además provee una aislación galvánica entre la entrada y la salida</p>
+        </div>
+        <div class="card">
+          <p>Etapa de rectificación
+            Esta etapa queda constituida por diodos rectificadores cuya función es de rectificar la señal proveniente del bobinado
+            secundario del transformador. Existen 2 tipos de configuraciones que son rectificación de media onda y de onda completa</p>
+            <p>Etapa de filtrado
+              Esta etapa queda constituida por uno o varios capacitores que se utilizan para eliminar la componente de tensión alterna que
+              proviene de la etapa de rectificación. Los capacitores se cargan al valor máximo de voltaje entregado por el rectificador y se
+              descargan lentamente cuando la señal pulsante desaparece, permitiendo lograr una nivel de tensión lo mas continua posible</p>
+              <p>Etapa de regulación
+                Esta etapa consiste del uso de uno o varios circuitos integrados que tienen la funcion de mantener constante las caracteristicas
+                del sistema y tienen la capacidad de mantener el estado de la salida independientemente de la entrada.
+                Esta etapa se puede dividir en:
+                Reguladores lineales y regulador de conmutación (switching) .</p>
+          </div>
+        </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>3.3 Ambientes de Servicio</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>TITLE HEADING</h2>
+          <h5>El negocio de proveer servicios de datos es mucho más complejo que la forma en la que se dan los tradicionales servicios, que
+            con frecuencia se terminan involucrando o necesitando la colaboración de terceras empresas.
+            <br>
+            • Desarrollo de nuevos mercados y productos <br>
+            • Adquisición y administración de clientes <br>
+            • Proveer y desarrollar servicios para la red <br>
+            • Administración del negocio</h5>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>3.3.1 Negocios</h2>
+          <p>Definitivamente, la tecnología en general ha sido la causa principal y la acción más directa para la transformación del
+            de las organizaciones en la posguerra del siglo XX. Tanto los bienes de capital «duros» (computadores, teléfonos, videos,
+            facsímiles, grabadoras, etc.), como los programas y sistemas de información y comunicación en general, han incrementado
+            la productividad y eficiencia de las organizaciones. Tenemos como ejemplos los siguientes: bases de datos en redes de todo
+            orden y topología, sistemas de reservaciones en aerolíneas, sistemas de contabilidad y nóminas, archivos clínicos en centros
+            de salud, sistemas de conmutación electrónica y un sin número de otras aplicaciones a procesos administrativos.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.3.2 Industria</h2>
+          <p>La industrialización de los servicios de tecnología de información va a redefinir el mercado en términos de como las
+            organizaciones evalúan, compran y seleccionan los servicios y como los vendedores desarrollan y establecen precios de
+            los servicios. Para lograr esta estandarización, se requiere un enfoque hacia las soluciones genéricas y esto debe ser
+            responsabilidad de los proveedores, que deben de desarrollar, operar y administrar el resultado de estos genéricos de TI.
+            Aunque los servicios de TI están en proceso de madurez, la madurez de la industria se ha incrementado en aspectos evidentes,
+            como la forma en que los servicios son implementados y administrados.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>3.3.3 Comercio Electrónico</h2>
+          <p>El desarrollo de estas tecnologías y de las telecomunicaciones ha hecho que los intercambios de datos crezcan a niveles
+            extraordinarios, simplificándose cada vez más y creando nuevas formas de comercio, y en este marco se desarrolla el Comercio
+            Electrónico. Se considera “Comercio Electrónico” al conjunto de aquellas transacciones comerciales y financieras realizadas
+            a través del procesamiento y la transmisión de información, incluyendo texto, sonido e imagen.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </div>
+    </div>
+
+    <!------>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h1 class="unidad">Unidad 4</h1>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>Un procesador en paralelo es el método mediante el cual una serie de tareas e instrucciones se ejecutan de forma simultánea.
+          Como cualquier trabajo en paralelo, se trata de dividir el trabajo en trozos más simples, que actualmente solemos llamar
+          hilos, threads o subprocesos. Cada uno de estos subprocesos es ejecutado en uno de los núcleos del procesador de forma
+          simultánea para aminorar el tiempo de espera entre tarea y tarea. Más adelante lo explicaremos con más detalle.
+          <br>
+          Sin darnos cuenta (o igual si), tenemos en nuestra casa procesadores en paralelo casi para cualquier tarea, por ejemplo,
+          nuestros móviles cuentan con procesadores multinúcleo capaces de ejecutar varias tareas, nuestros ordenadores también e
+          incluso los televisores inteligentes ya cuentan con procesadores de este tipo.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>4.1 Aspectos Básicos de la computación paralela</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre
+            el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente
+            (en paralelo). Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de
+            instrucción, paralelismo de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, sobre todo
+            en la computación de altas prestaciones, pero el interés en ella ha crecido últimamente debido a las limitaciones físicas
+            que impiden el aumento de la frecuencia. Como el consumo de energía y por consiguiente la generación de calor de las
+            computadoras constituye una preocupación en los últimos años, la computación en paralelo se ha convertido en el paradigma
+            dominante en la arquitectura de computadores, principalmente en forma de procesadores multinúcleo.</p>
+        </div>
+        <div class="card">
+          <p>Aspectos a considerar
+            <BR><BR>
+            • Diseño de computadores paralelo: Escalabilidad y Comunicaciones.<BR>
+            • Diseño de algoritmos eficientes: No hay ganancia si los algoritmos no se diseñan adecuadamente.<BR>
+            • Métodos para evaluar los algoritmos paralelos: ¿Cómo de rápido se puede resolver un problema usando una máquina paralela?<BR>
+            ¿Con qué eficiencia se usan esos procesadores?.<BR>
+            • Lenguajes para computadores paralelos, flexibles para permitir una implementación eficiente y que sean fáciles de programar.<BR>
+            • Herramientas para la programación paralela.<BR>
+            • Programas paralelos portables.<BR>
+            • Compiladores paralelizantes.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Las computadoras paralelas pueden clasificarse según el nivel de paralelismo que admite su hardware: equipos con procesadores
+            multinúcleo y multi-procesador que tienen múltiples elementos de procesamiento dentro de una sola máquina y los clústeres,
+            MPPS y grids que utilizan varios equipos para trabajar en la misma tarea. Muchas veces, para acelerar la tareas específicas,
+            se utilizan arquitecturas especializadas de computación en paralelo junto a procesadores tradicionales.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>4.2 Tipos de computación paralela</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>Paralelismo a nivel de bit:</h2><br>
+          <h5>Desde el advenimiento de la integración a gran escala (VLSI) como tecnología de fabricación de chips de computadora en la
+            década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando
+            el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo.</h5>
+        </div>
+        <div class="card">
+          <p>Paralelismo de datos:<br>
+            El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos
+            entre los diferentes nodos computacionales que deben tratarse en paralelo. La paralelización de ciclos conduce a menudo a
+            secuencias similares de operaciones —no necesariamente idénticas— o funciones que se realizan en los elementos de una gran
+            estructura de datos. Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+            <br>
+            Una dependencia de terminación de ciclo es la dependencia de una iteración de un ciclo en la salida de una o más iteraciones
+            anteriores. Las dependencias de terminación de ciclo evitan la paralelización de ciclos.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Paralelismo a nivel de instrucción:</h2>
+          <p>Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. Estas instrucciones
+            pueden reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin cambiar el resultado del programa. Esto
+            se conoce como paralelismo a nivel de instrucción. Los avances en el paralelismo a nivel de instrucción dominaron la
+            arquitectura de computadores desde mediados de 1980 hasta mediados de la década de 1990.
+            <BR>
+            Los procesadores modernos tienen ''pipeline'' de instrucciones de varias etapas. Cada etapa en el pipeline corresponde a
+            una acción diferente que el procesador realiza en la instrucción correspondiente a la etapa; un procesador con un pipelinede
+            N etapas puede tener hasta n instrucciones diferentes en diferentes etapas de finalización. El ejemplo canónico de un procesador
+            segmentado es un procesador RISC, con cinco etapas: pedir instrucción, decodificar, ejecutar, acceso a la memoria y escritura.
+            El procesador Pentium 4 tenía un pipeline de 35 etapas.</p>
+        </div>
+        <div class="card">
+          <p>Paralelismo de tareas:<br>
+            El paralelismo de tareas es la característica de un programa paralelo en la que cálculos completamente diferentes se pueden
+            realizar en cualquier conjunto igual o diferente de datos. Esto contrasta con el paralelismo de datos, donde se realiza el
+            mismo cálculo en distintos o mismos grupos de datos. El paralelismo de tareas por lo general no escala con el tamaño de un
+            problema.</p>
+        </div>
+      </div>
+    </div><br><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>4.2.1 Clasificación</h2>
+          <h5>Taxonomía de las Computadoras</h5>
+          <p>Las diferentes posibilidades existentes para desarrollar sistemas paralelos hacen que una clasificación definitiva sea
+            complicada. Se muestra una clasificación clásica propuesta por Flynn, que se basa en el ciclo de instrucciones y en el
+            flujo de dato.</p>
+        </div>
+        <div class="card">
+          <h2>Taxonomía de FLYNN</h2>
+          <p>En 1966 Flynn propuso una clasificación generalista de las computadoras adoptando como criterio el flujo de instrucciones y
+            el flujo de datos que en ellos se desarrolla. La clasificación de Flynn es la siguiente:
+            
+            SISD:
+            Instrucción única, datos únicos. Las instrucciones se ejecutan secuencialmente pero pueden estar solapadas
+            en las etapas de ejecución.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <div class="fakeimg">
+            <p>SIMD:
+              Instrucción única, datos múltiples. Son los procesadores matriciales en los que existen varias unidades
+              de procesamiento trabajando sobre flujos de datos distintos pero ejecutando la misma instrucción.</p>
+          </div>
+          <div class="fakeimg">
+            <p>MISD:
+              Instrucción múltiple, datos únicos. Este se caracteriza por la existencia de varias unidades de procesamiento cada una
+              ejecutando una instrucción diferente pero sobre el mismo flujo de datos.</p>
+          </div>
+          <div class="fakeimg">
+            <p>MIMD:
+              Es una técnica empleada para lograr paralelismo. Las máquinas que usan MIMD tienen un número de procesadores que funcionan
+              de manera asíncrona e independiente.</p>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>4.2.2 Arquitectura de computadores secuenciales</h2>
+          <p>Los computadores secuenciales, también denominados computadores serie, se basan en la arquitectura de j. von neumann.
+            En este modelo se considera una única secuencia de instrucciones que tratan una única secuencia de datos. Por ello se
+            conocen como computadores<br>
+            La programación paralela permite:<br>
+            – Resolver problemas que no caben en una CPU<br>
+            – Resolver problemas que no se resuelven en un tiempo razonable<br>
+            – Se pueden ejecutar<br>
+            – Problemas mayores<br>
+            – Más rápidamente (aceleración)<br>
+            – Más problemas<br>
+            
+            </p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>4.2.3 Organización de direcciones de memoria</h2>
+          <p>El intercambio de información entre procesadores depende del sistema de almacenamiento que se disponga.
+            <br>
+            Sistemas de memoria compartida o multiprocesadores<br>
+            Se caracterizan por compartir físicamente la memoria, es decir todos acceden al mismo espacio de direcciones.
+            En esta arquitectura a la memoria es igualmente accesible por todos los procesadores a través de la red de interconexión.
+            Sistemas de memoria distribuida o multicomputadores<br>
+            En estos sistemas cada procesador dispone de su propia memoria.<br>
+            Denominada local o privada, independientedel resto y accesible solo por su procesador.<br>
+            Existen dos espacios de dirección disponibles para el microcontrolador Z8PLUS:<br>
+            • El archivo de registros de la RAM contiene direcciones para todos los registros de control y los de propósitogeneral.<br>
+            • La memoria de programa contiene direcciones para todas las localidades de memoria donde se hallan guardado códigos o
+            datos ejecutables</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>4.3 Sistemas de memoria compartida: Multiprocesadores</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores interconectados que comparten
+            un mismo sistema de memoria.
+            <br>
+            Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida. Tienen un único espacio de direcciones para
+            todos los procesadores y los mecanismos de comunicación se basan en el paso de mensajes desde el punto de vista del programador.
+            <br>
+            Dado que los multiprocesadores comparten diferentes módulos de memoria, pudiendo acceder a un mismo módulo varios procesadores,
+            a los multiprocesadores también se les llama sistemas de memoria compartida.</p>
+        </div>
+        <div class="card">
+          <p>Los programas típicamente se escriben asumiendo que sus datos son incorruptibles. Sin embargo, si otra copia del programa
+            se ejecuta en otro procesador, las dos copias pueden interferir entre sí intentando ambas leer o escribir su estado al mismo tiempo.
+            <br>
+            Para evitar este problema se usa una variedad de técnicas de programación incluyendo semáforos y otras comprobaciones y
+            bloqueos que permiten a una sola copia del programa cambiar de forma exclusiva ciertos valores.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <p>Dependiendo de la forma en que los procesadores comparten la memoria, se clasifican en sistemas multiprocesador UMA, NUMA y COMA.
+            <br>
+            Multiproceso es tradicionalmente conocido como el uso de múltiples procesos concurrentes en un sistema en lugar de un único
+            proceso en un instante determinado. Como la multitarea que permite a múltiples procesos compartir una única CPU, múltiples
+            CPUs pueden ser utilizados para ejecutar múltiples hilos dentro de un único proceso.
+            <br>
+            El multiproceso para tareas generales es, a menudo, bastante difícil de conseguir debido a que puede haber varios programas
+            manejando datos internos (conocido como estado o contexto) a la vez.</p>
+        </div>
+      </div>
+    </div><br><br><br>
+    <div class="separacion"></div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>4.3.1 Redes de interconexión dinámica (indirecta)</h2>
+          <h5>Medio compartido<br>
+            Conmutadas<br>
+            Redes de interconexión dinámica (indirecta)</h5>
+          <p>Uno de los criterios más importantes para la clasificación de las redes es el que tiene en cuenta la situación de la red
+            en la máquina paralela, dando lugar a dos familias de redes: redes estáticas y redes dinámicas. Una red estática es una
+            red cuya topología queda definida de manera definitiva y estable durante la construcción de la máquina paralela.
+            <br>
+            La red simplemente une los diversos elementos de acuerdo a una configuración dada. Se utiliza sobre todo en el caso de los
+            multicomputadores para conectar los diversos procesadores que posee la máquina. Por la red sólo circulan los mensajes entre
+            procesadores, por lo que se dice que la red presenta un acoplamiento débil. En general, en las redes estáticas se exige poca
+            carga a la red.
+            <br>
+            Una red dinámica es una red cuya topología puede variar durante el curso de la ejecución de un programa paralelo o entre dos
+            ejecuciones de programas. La red está constituida por elementos materiales específicos, llamados commutadores o switches.</p>
+        </div>
+        <div class="card">
+          <h2>Medio compartido</h2>
+          <p>En el ejemplo del subapartado anterior sólo había un emisor y un receptor unidos por una fibra óptica. En el mundo de las
+            comunicaciones, y de las redes de computadores en particular, el medio que se utiliza para comunicarse suele estar compartido.
+            Con una serie de ejemplos iremos viendo diferentes maneras de compartir el medio.
+            <br><br>
+            En el caso de la televisión o la radio, existen diferentes canales y emisoras que están compartiendo el medio. A fin de que
+            no haya problemas, hay una regulación del espectro radioeléctrico: se tiene cuidado de que cada uno de los canales tenga
+            asignada una frecuencia determinada y que no haya más de un canal usando la misma frecuencia. Este sistema se llama
+            multiplexación por división de frecuencia y no sólo se utiliza en la radio y la televisión.
+            <br>
+            Por ejemplo, los sistemas de línea de abonado digital asimétrica (ADSL) utilizan este sistema para conectar la red de
+            computadores de casa a Internet. Como se puede ver en la figura siguiente, por el cable telefónico circulan tres tipos
+            de información, cada uno por su frecuencia asignada: la voz de las llamadas telefónicas, la información digital que viene
+            de Internet (bajada) y la información digital que nosotros enviamos a Internet (subida).
+            <br>
+            Si lo que se está compartiendo es una fibra óptica, se tiende a realizar una multiplexación por división del tiempo.
+            Supongamos que una misma fibra está siendo utilizada por cuatro comunicaciones. En ese caso, la fibra estará disponible
+            durante un instante determinado de tiempo para la comunicación número 1; el siguiente instante de tiempo lo estará para la
+            comunicación 2 y así sucesivamente. Una vez haya acabado la comunicación número 4, la fibra volverá a estar disponible para
+            la comunicación 1.
+            <br>
+            Otro método de compartición del acceso en el medio se basa en la distribución de éste por parte de un dispositivo maestro.
+            Por ejemplo, en la tecnología Bluetooth, los dispositivos próximos forman una red llamada piconet. En cada piconet se elige
+            un dispositivo maestro que va preguntando a los demás dispositivos (que hacen las funciones de esclavo) quién debe utilizar
+            el medio. En el caso de que alguien lo necesite, lo tendrá disponible durante cierto tiempo.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Conmutadas</h2>
+          <p>Cuando se va a enviar datos a largas distancias (e incluso a no tan largas), este debe pasar por varios nodos intermedios.
+            Los cuáles son los encargados de dirigir los datos para que lleguen a su destino. Por lo cual se hace uso de lo que es una
+            red conmutada. ya que estas Consisten en un conjunto de nodos interconectados entre sí, a través de medios de transmisión,
+            formando así la mayoría de las veces una topología mallada, donde la información se traslada encaminándola del nodo de origen
+            al nodo destino mediante conmutación entre nodos intermedios.<br>
+            Una transmisión de este tipo tiene 3 fases:<br>
+            -Establecimiento de la conexión.<br>
+            -Transferencia de la información.<br>
+            -Liberación de la conexión.<br>
+            <br>
+            Así mismo podemos decir que Se entiende por conmutación en un nodo, a la conexión física o lógica, de un camino de entrada
+            al nodo con un camino de salida del nodo, con el fin de transferir la información.
+            <br>
+            En pocas palabras se puede decir que una red conmutada es aquella que permite la comunicación de nodo a nodo a través de
+            su conexión, para facilitar el traslado de información.</p>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>4.4 Sistemas de memoria distribuida: Multicomputadores</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <p>Los sistemas de memoria distribuida o multicomputadores pueden ser de dos tipos básicos. El primer de ellos consta de un
+            único computador con múltiples CPUs comunicadas por un bus de datos mientras que en el segundo se utilizan múltiples
+            computadores, cada uno con su propio procesador, enlazados por una red de interconexión más o menos rápida.
+            <br>
+            Sobre los sistemas de multicomputadores de memoria distribuida, se simula memorias compartidas. Se usan los mecanismos
+            de comunicación y sincronización de sistemas multiprocesadores.
+            <br>
+            Un clúster es un tipo de arquitectura paralela distribuida que consiste de un conjunto de computadores independientes
+            interconectados operando de forma conjunta como único recurso computacional sin embargo, cada computador puede utilizarse
+            de forma independiente o separada.
+            <br>
+            En esta arquitectura, el computador paralelo es esencialmente una colección de procesadores secuenciales, cada uno con su
+            propia memoria local, que pueden trabajar conjuntamente.
+            <br>
+            • Cada nodo tiene rápido acceso a su propia memoria y acceso a la memoria de otros nodos mediante una red de comunicaciones,
+            habitualmente una red de comunicaciones de alta velocidad.<br>
+            • Los datos son intercambiados entre los nodos como mensajes a través de la red.<br>
+            • Una red de ordenadores, especialmente si disponen de una interconexión de alta velocidad, puede ser vista como un
+            multicomputador de memoria distribuida y como tal ser utilizada para resolver problemas mediante computación paralela.</p>
+        </div>
+        <div class="card">
+          <h2>4.4.1 Redes de interconexión estáticas</h2>
+          <p>Las redes estáticas emplean enlaces directos fijos entre los nodos. Estos enlaces, una vez fabricado el sistema son
+            difíciles de cambiar, por lo que la escalabilidad de estas topologías es baja. Las redes estáticas pueden utilizarse
+            con eficiencia en los sistemas en que pueden predecirse el tipo de tráfico de comunicaciones entre sus procesadores.
+            <br>
+            Clases de redes de interconexión:<br>
+            • Formación lineal: Se trata de una red unidimensional en que los nodos se conectan cada uno con el siguiente
+            medianteN-1 enlaces formando una línea.<br>
+            • Mallas y toros: Esta red de interconexión es muy utilizada en la práctica. Las redes en toro son mallas en que sus
+            filas y columnas tienen conexiones en anillo, esto contribuye a disminuir su diámetro. Esta pequeña modificación permite
+            convertir a las mallas en estructuras simétricas y además reduce su diámetro a la mitad.</p>
+        </div>
+
+      </div>
+    </div><br><br>
+    <div class="separacion"></div>
+    <div class="subtitulos">
+      <h2>4.4 Sistemas de memoria distribuida: Multicomputadores</h2>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h5>Ejemplos de caso de estudio:<br>
+            1. NVIDIA PYSICS LAYER: GPU PhysXCPU PhysXGraphics Layer: GPU –Direct X Windows
+            <br><br>
+            2. INTELPYSICS LAYER:No GPU PhysXCPU HavokGraphics Layer:GPU –Direct XWindows
+            <br><br>
+            3. AMD PYSICS LAYER: No GPU PhysXCPU HavokGraphics Layer:GPU –Direct XWindows
+            <br><br>
+            Interesa realizar investigación en la especificación, transformación, optimización y evaluación de algoritmos
+            distribuidos y paralelos. Esto incluye el diseño y desarrollo de sistemas paralelos, la transformación de
+            algoritmos secuenciales en paralelos, y las métricas de evaluación de performance sobre distintas plataformas
+            de soporte (hardware y software). Más allá de las mejoras constantes en las arquitecturas físicas de soporte,
+            uno de los mayores desafíos se centra en cómo aprovechar al máximo la potencia de las mismas.</h5>
+        </div>
+        
+      </div>
+ 
+    <!------>
+  </div>
+</div>
+  <div id="tareas" class="tabcontent">
+    <a href="https://drive.google.com/drive/folders/1DQ5Ez6lEqXs6MTXOQ871JHbUE8KDhM_R?usp=sharing">
+  <img src="../media/descarga.jfif" >
+  </a>
+  <h1> Click en la imagen para ir a las tareas!</h1>
+  </div>
+
+
+</body>
+
+</html>
